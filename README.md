@@ -20,6 +20,7 @@
 ###1.2 平台
 
 - 项目框架：asp.net mvc 4.0
+- 开发工具: vs2010
 - 数据库管理系统：sql express
 - 硬件:<br/>
 1、树莓派（Raspberry Pi）一个<br/>
@@ -83,4 +84,6 @@
 ![online-meal](https://raw.githubusercontent.com/halfopen/OlineOrderMealSystem/master/1.png)
 可以说没在在前端花大多的时间<br/>
 js代码是全部重写的，在此过程中了解到了js跨域jsonp解决方案<br/>
+c#由于之前没接触过，在学习过程中遇到了很多问题。<br/>
 在完成这个作业的过程中，大家都学到了很多。<br/>
+在实际使用过程中，发现一个有趣的现象:其实宿舍不开门的话，虽然可以看出早晨5、6点左右温度最低，但是上下温差不超过一度，可以说是基本恒温的。
