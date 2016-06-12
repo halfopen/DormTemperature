@@ -42,8 +42,9 @@
 ####用嵌入式设备配合传感器实时上传温度到公网服务器
 利用树莓派，使用DS18b20温度传感器模块，每过2分钟进行一次采样，上传温度数据到服务器
 ![soft](https://raw.githubusercontent.com/halfopen/DormTemperature/master/DormTemperature/Images/d1.JPG)
+
 树莓派控制台
-![soft](https://raw.githubusercontent.com/halfopen/DormTemperature/master/DormTemperature/Images/pi.JPG)
+![soft](https://raw.githubusercontent.com/halfopen/DormTemperature/master/DispPic/pi.JPG)
 
 图表显示可以选择所有，一年内，最近三个月，最近一个小时的温度数据等
 ![index](https://raw.githubusercontent.com/halfopen/DormTemperature/master/DispPic/2.png)
@@ -69,6 +70,7 @@
 ###2.4 位置定位 
 ####百度地图api调用
 ![index](https://raw.githubusercontent.com/halfopen/DormTemperature/master/DispPic/3.png)
+后期考虑加入图片实时拍照上传
 
 
 ##3实验体会
