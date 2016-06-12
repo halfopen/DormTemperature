@@ -45,6 +45,9 @@
 
 树莓派控制台
 ![console](https://raw.githubusercontent.com/halfopen/DormTemperature/master/DispPic/pi.png)
+采集一定量的数据之后，进行批量上传<br/>
+数据点格式为:<br/>
+{timestamp:时间戳, value:温度}
 
 图表显示可以选择所有，一年内，最近三个月，最近一个小时的温度数据等
 ![chart](https://raw.githubusercontent.com/halfopen/DormTemperature/master/DispPic/2.png)
@@ -52,7 +55,7 @@
 
 ###2.2 室友交流
 ####简单的用户系统，室友登录，发评论
-用户功能
+用户功能<br/>
 登录
 ![login](https://raw.githubusercontent.com/halfopen/DormTemperature/master/DispPic/4.png)
 注册
