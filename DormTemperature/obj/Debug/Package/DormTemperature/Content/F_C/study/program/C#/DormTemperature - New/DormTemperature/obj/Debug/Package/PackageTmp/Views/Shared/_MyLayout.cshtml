@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - 宿舍温度查看</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Scripts.Render("~/bundles/modernizr")
+
+        <link rel="stylesheet" type="text/css" href="/Content/animate.min.css" />
+	    <link rel="stylesheet" type="text/css" href="/Content/style.css"/>
+	    <link rel="stylesheet" type="text/css" href="/Content/smartMenu.css"/>
+	    <link rel="stylesheet" href= "/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+	    <!--基本样式-->
+	    <link rel="stylesheet" type="text/css" href="/Content/index.css"  />
+	    <link rel="stylesheet" type="text/css" href="/Content/staff.css"  />
+        <!--bootstrap样式-->
+	    <link rel="stylesheet" href="/bootstrap-3.3.5-dist/css/bootstrap-theme.min.css" />
+	    <link rel="stylesheet" href="/Content/bootstrap-table.min.css"/>
+        <link rel="stylesheet" href="/Content/Site.css"/>
+        <link rel="stylesheet" href="/Content/deviceshow.css"/>
+    </head>
+    <body>
+            <nav class="navbar navbar-default " role="navigation">
+	           <div style="position: relative;float: left;width: 20%;">&nbsp;</div>
+	           <div class="navbar-header">
+	              <button type="button" class="navbar-toggle" data-toggle="collapse"
+	                 data-target="#example-navbar-collapse">
+	                 <span class="sr-only">切换导航</span>
+	                 <span class="icon-bar"></span>
+	                 <span class="icon-bar"></span>
+	                 <span class="icon-bar"></span>
+	              </button>
+	
+	              <a href=""><img style="width: 40px; top: 5px; position: relative; left: -6px;" src="/Images/glyphicons_free/glyphicons/png/glyphicons-21-home.png" ></a>
+	              @Html.ActionLink("宿舍温度检测", "Index", "Home", new { }, new { @class = "navbar-brand" })
+	           </div>
+	           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+	              <ul class="nav navbar-nav">
+	                 <li>@Html.ActionLink("温度查看", "showTemperature", "Temperature")</li>
+	                 <li class="staff-nav">@Html.ActionLink("关于", "About", "Home")</li>
+	                 <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                     <li>@Html.ActionLink("作者", "Author", "Home")</li>
+                     <li class="dropdown">
+                        @if (Request.IsAuthenticated) {
+                            <a class="dropdown-toggle" data-toggle="dropdown">@User.Identity.Name <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    @Html.ActionLink("用户管理", "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "管理" })
+                                </li>
+                                <li>
+                                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+                                        @Html.AntiForgeryToken()
+                                        <a href="javascript:document.getElementById('logoutForm').submit()">注销</a>
+                                    }
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <a  href="index.jsp" class="dropdown-toggle" data-toggle="dropdown">
+                               &nbsp;用户 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                               <li>@Html.ActionLink("注册", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                               <li>@Html.ActionLink("登录", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                            </ul>
+                        }
+
+
+                        
+                     </li>
+	              </ul>
+	           </div>
+	        </nav>
+            <div class="container">
+                @RenderSection("featured", required: false)
+                @RenderBody()
+            </div>
+            <nav class="navbar-default navbar-fixed-bottom class navbar-collapse" >
+                <div class="text-center text-danger bg-info animated flip">
+                </div>
+                <div class="container">
+                    <p class="text-center">&nbsp;&nbsp;C#大作业 &copy; @DateTime.Now.Year-宿舍温度检测</p>
+                </div>
+            </nav>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+        <script type="text/javascript" src="/Scripts/bootstrap.min.js" ></script>
+	    <script type="text/javascript" src="/bootstrap-3.3.5-dist/js/bootstrap-select.js" ></script>
+	    <script type="text/javascript" src="/Scripts/bootbox.js"></script>
+	    <script type="text/javascript" src="/Scripts/jquery-smartMenu.js" ></script>
+	    <script type="text/javascript" src="/Scripts/common.js" ></script>
+    </body>
+</html>

@@ -1,0 +1,322 @@
+#banner{
+	background:url(../images/banner/devicesshow2.jpg) center center;
+}
+#banner.bg1{
+	background:url(../images/banner/devicesshow1.jpg) center center;
+}
+#banner.bg2{
+	background:url(../images/banner/devicesshow2.jpg) center center;
+}
+#banner.bg3{
+	background:url(../images/banner/devicesshow3.jpg) center center;
+}
+#banner.bg4{
+	background:url(../images/banner/devicesshow4.jpg) center center;
+}
+#banner.bg5{
+	background:url(../images/banner/devicesshow5.jpg) center center;
+}
+#banner.bg6{
+	background:url(../images/banner/devicesshow6.jpg) center center;
+}
+#banner.bg7{
+	background:url(../images/banner/devicesshow7.jpg) center center;
+}
+#banner.bg8{
+	background:url(../images/banner/devicesshow8.jpg) center center;
+}
+#banner.bg9{
+	background:url(../images/banner/devicesshow9.jpg) center center;
+}
+#banner.short{
+	height:160px;
+}
+#banner.normal{
+	height:400px;
+}
+
+
+
+#device_body{
+	width:1200px;
+	margin:0 auto;
+	min-height:600px;
+}
+
+.device_title{
+	font-size:24px;
+	color:#666;
+	line-height:60px;
+	padding-left: 40px;
+	background:url("../images/icon_leaf.png") no-repeat scroll left center transparent;
+}
+
+.tabbable .nav-tabs{
+	border-bottom:2px solid #007AD5;
+}
+.tabbable .nav-tabs li{
+	display:inline-block;
+	background:#f1f1f1;
+	line-height:30px;
+	height:30px;
+}
+.tabbable .nav-tabs li>a{
+	display:block;
+	padding:0 20px;
+}
+.tabbable .nav-tabs li.select, .tabbable .nav-tabs li.active{
+	background:#007AD5;
+	color:#fff;
+}
+.tabbable .nav-tabs li.select a, .tabbable .nav-tabs li.active a{color:#fff;}
+.tab-content{
+	color:#333;
+	font-size:14px;
+	line-height:24px;
+	padding:0 0 20px 0;
+}
+.tab-content .row{
+	margin-bottom:20px;
+}
+.tab-content .sensor{
+	margin:10px 0;
+}
+.tab-content .sensor .map{
+	height:400px;
+}
+.tab-content .devicemap{
+	float:left;
+	width:700px;
+	background:url(../images/s1.gif) center center no-repeat;
+}
+#device_loc_map{
+	width:700px;
+	height:300px;
+}
+.tab-content .summary{
+	width:480px;
+	float:right;
+}
+
+.device-box{
+	padding:10px 0;
+	font-size:medium;
+}
+.device-box h3{
+	text-align:center;
+}
+.device-box label{
+	/*text-align:right;*/
+	display:inline-block;
+	width:97px;
+	/*background:#007AD5;*/
+	color:#007AD5;
+	padding:0 4px;
+	float: left;
+}
+.device-box p{
+	margin-left:90px;
+}
+.device-box ul li{
+	margin:10px 0;
+    list-style: none;
+}
+
+.data_sensor{
+	background:#f1f1f1;
+	margin-bottom:10px;
+}
+.data_sensor .currentbox{
+	text-align:center;
+}
+.data_sensor .currentbox .title{
+	padding-top:50px;
+}
+.data_sensor .currentbox label{
+	font-size:24px;
+	line-height:40px;
+	color:#666;
+}
+.data_sensor .currentbox .current_value{
+	font-size:48px;
+	line-height:70px;
+	color:#0061AB;
+}
+
+.data_sensor .currentbox .current_unit{
+	font-size:18px;
+	line-height:40px;
+	color:#999;
+}
+
+.data_sensor .currentbox .current_date{
+	font-size: 12px;
+	color: #999;
+}
+.gps_sensor{
+	line-height:24px;
+}
+.gps_sensor .bar{
+	line-height:30px;
+	height:30px;
+	padding:4px 0;
+}
+.gps_sensor .bar label{
+	cursor:pointer;
+	padding-right:10px;
+}
+.gps_sensor .bar span input{
+	border:2px solid #eee;
+	line-height:24px;
+	height:24px;
+	outline:none;
+	padding:0 4px;
+}
+.gps_sensor .bar button{
+	background:#007AD5;
+	color:#fff;
+	border:none;
+	border-bottom:2px solid #0061AB;
+	border-top:2px solid #007AD5;
+	line-height:24px;
+	height:28px;
+	outline:none;
+	padding:0 10px;
+	cursor:pointer;
+	font-size:14px;
+}
+.gps_sensor .bar button:hover{
+	background:#0092EF;
+	border-top:2px solid #0092EF;
+}
+.tab-content h3{
+	font-size:16px;
+	color:#007AD5;
+	font-weight: bold;
+	line-height:40px;
+}
+.tab-content .side-box{
+	overflow:hidden;
+}
+.tab-content .fl{
+	padding: 2px;
+	width:996px;
+	min-height:400px;
+	float:left;
+	background:url(../images/s1.gif) center center no-repeat;
+}
+.tab-content .fr{
+	width:200px;
+	float:right;
+}
+.post-home {
+	margin:0 6px 6px 0;
+	display:inline-block;
+	position: relative;
+	min-width:50px;
+	height:140px;
+	overflow:hidden;
+}
+.post-home img {
+}
+.post-home .title {
+	display:none;
+	font-size: 12px;
+	position:absolute;
+	width:100%;
+	height:140px;
+	top:0;
+	left:0;
+	background: url(../images/alphabg.png);
+	background:rgba(0, 0, 0, .5);
+	color:#fff;
+}
+.post-home:hover .title{
+	display:block;
+}
+.span35 {
+}
+#device_img_box{
+	min-height:140px;
+	background:url(../images/s1.gif) center center no-repeat;
+}
+#deviceimagesbox{
+	display:none;
+	background:#fff;
+}
+#no_comment{
+	color:#999;
+}
+#comment{
+	color:#666;
+}
+#comment .alert{background:#f1f1f1;
+	line-height:30px;
+	padding:0 10px;
+}
+#comment .alert a{
+	color:#007ad5;
+}
+#comment .comment-text{
+	outline: none;
+	/*border:2px solid #198ada;*/
+	border:2px solid #ccc;
+	margin:0;
+	padding:4px;
+	box-shadow:0 0 5px #ccc inset;
+	border-radius: 3px;
+	margin-bottom:10px;
+	width:600px;
+	height:80px;
+	font-size:14px;
+}
+#comment .comment-text:focus{
+	border:2px solid #198ada;
+	box-shadow:0 0 5px #198ada inset;
+	-webkit-transform: all .2s ease-in-out;
+	-moz-transform: all .2s ease-in-out;
+}
+.comment-content{
+	border-bottom:2px solid #eee;
+	margin:20px 0;
+	padding-bottom:20px;
+}
+
+.comment-content cite{
+	color:#999;
+	font-size:12px;
+}
+.comment-content cite strong a{
+	color:#007ad5;
+}
+
+#num_p{
+	color:#999;
+}
+
+#comment_loading{
+	display:none;
+	height:30px;
+	background:url(../images/s1.gif) center center no-repeat;
+}
+.time-range
+{
+    padding:3px;
+}
+
+.time-range span
+{
+    background:#8cd6aa;
+    border: 1px;
+    border-radius: 8px;
+    padding: 1px;
+    margin: 1px;
+    width: 44px;
+    display: inline-block;
+    text-align: center;
+    cursor:pointer;
+}
+.time-range span:hover
+{
+    background:#14eaa5;
+}

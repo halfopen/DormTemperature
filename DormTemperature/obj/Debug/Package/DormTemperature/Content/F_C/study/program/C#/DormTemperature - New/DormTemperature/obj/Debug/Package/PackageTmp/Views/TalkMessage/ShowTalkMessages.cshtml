@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "评论交流";
+}
+
+<div class="block">
+    <h3 class="animated bounceInLeft banner">
+		<a href="#" target="_blank" title="@ViewBag.Message" class="ch"><span style="ont-size: 16px;letter-spacing: .06em;   font-family: 'Microsoft YaHei','微软雅黑','黑体','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    color: #fff;
+    background-color: #67bdcd;
+    padding: 0 24px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 6px;">@ViewBag.Message</span><i class="line-vt"></i></a><i class="line-unit"></i><i class="circle-banner"></i>
+		<span class="tag">@ViewBag.Title</span>
+	</h3>
+</div>
+
+<div style="margin-top:20px;">
+@if (Request.IsAuthenticated)
+{
+    <span id="message-username">@User.Identity.Name </span>
+    <input id="message-content" name="content" type="text" />
+    <input id="submit-message" type="button" value="提交"/>                                                  
+}
+else
+{
+    <h1>需要 @Html.ActionLink("登录", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" }) 才能发布留言</h1>
+}
+</div>
+
+
+
+<div style="margin-top:70px;">
+    @foreach (var item in Model)
+    {
+        <fieldset style="border:1px solid #B5B8C8;padding:10px;margin-bottom:10px;display:block;border-bottom-color:Red; border-left-color:Green; border-right-color:Blue; border-top-color:Purple; text-decoration:none;">
+        <legend class="animated bounceInLeft" style="width: inherit; display:block;"><span class="mybutton" ><span style="padding: 60px;color: white;">@item.username 在 @item.timestamp 说道:</span></span></legend>
+            <div class="message-item">
+            
+                <div class="message-content">@item.content</div>
+            
+            </div>
+        </fieldset>
+    }
+</div>
+<script src="/Scripts/jquery-1.7.1.js"></script>
+<script src="/Scripts/message.js"></script>

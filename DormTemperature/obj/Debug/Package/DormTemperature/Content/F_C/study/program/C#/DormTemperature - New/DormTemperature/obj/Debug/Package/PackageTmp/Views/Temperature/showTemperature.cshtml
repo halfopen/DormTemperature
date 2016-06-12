@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "DeviceShow";
+}
+
+<div class="block">
+    <h3 class="animated bounceInLeft banner">
+		<a href="#" target="_blank" title="@ViewBag.Message" class="ch"><span style="ont-size: 16px;letter-spacing: .06em;   font-family: 'Microsoft YaHei','微软雅黑','黑体','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    color: #fff;
+    background-color: #67bdcd;
+    padding: 0 24px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 6px;">@ViewBag.Message</span><i class="line-vt"></i></a><i class="line-unit"></i><i class="circle-banner"></i>
+		<span class="tag">@ViewBag.Title</span>
+	</h3>
+</div>
+
+<div class="row">
+				<!-- sensor list -->
+		<div class="span12 small-form">
+					<h3 style="font-size: 16px;color: #007AD5;font-weight: bold;line-height: 40px;">温度传感器</h3>
+                    <div class="time-range" style="display:none;">
+                        时间范围:<span id="t-1h">1h</span><span id="t-3h">3h</span><span>12h</span><span>1d</span><span>3h</span>
+                        <span>1w</span><span>1m</span><span>3m</span><span>1y</span><span>all</span>
+                    </div>
+					<div class="sensor data_sensor">
+						<div class="side-box fl" id="chart_container" 
+                        style="position: relative; overflow: hidden;  height: 400px; text-align: left; line-height: normal; 
+						    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif; 
+						    font-size: 12px; cursor: auto;">
+							<div id="data_chart390045" unit="摄氏度(°C)">
+							</div>
+						</div>
+						<div class="side-box fr currentbox" nowrap="">
+							<div class="title"><label>最新数据</label></div>
+							<div class="current_value">@ViewBag.value</div>
+							<div class="current_unit">摄氏度(℃)</div>
+							<div class="current_date">更新时间：@ViewBag.timestamp</div>
+						</div>
+						<br class="clr">
+					</div>
+		</div>
+</div>
+
+<script type="text/javascript" src="/Scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/Scripts/highstock.js"></script>
+<script type="text/javascript" src="/Scripts/data_chart.js"></script>
+<script type="text/javascript">
+    drawDataChart(390045);
+</script>
+

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DormTemperature.Models.TalkMessage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="block">
+    <h3 class="animated bounceInLeft banner">
+		<a href="#" target="_blank" title="@ViewBag.Message" class="ch"><span style="ont-size: 16px;letter-spacing: .06em;   font-family: 'Microsoft YaHei','微软雅黑','黑体','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    color: #fff;
+    background-color: #67bdcd;
+    padding: 0 24px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 6px;">@ViewBag.Message</span><i class="line-vt"></i></a><i class="line-unit"></i><i class="circle-banner"></i>
+		<span class="tag">@ViewBag.Title</span>
+	</h3>
+</div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.timestamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.content)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.timestamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.content)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,12 @@
+﻿<parameters>
+  <parameter name="IIS Web Application Name" defaultValue="Default Web Site/DormTemperature_deploy" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^F:\\study\\program\\C\#\\DormTemperature\ -\ New\\DormTemperature\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^F:\\study\\program\\C\#\\DormTemperature\ -\ New\\DormTemperature\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection 应用程序在 web.config 中用来访问数据库的连接字符串。" defaultValue="Data Source=.\SQLEXPRESS;Initial Catalog=aspnet-DormTemperature-20160421202916;Integrated Security=SSPI" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="F:\\study\\program\\C\#\\DormTemperature\ -\ New\\DormTemperature\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="mvcmysqlEntities-Web.config Connection String" description="mvcmysqlEntities 应用程序在 web.config 中用来访问数据库的连接字符串。" defaultValue="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;server=127.0.0.1;user id=root;persistsecurityinfo=True;database=mvcmysql&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="F:\\study\\program\\C\#\\DormTemperature\ -\ New\\DormTemperature\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='mvcmysqlEntities']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "主页";
+}
+@section featured {
+            <h1 class="animated bounceInLeft">@ViewBag.Message</h1>
+
+           <div class="row">
+              <div class="animated swing row-content col-lg-4 col-sm-6 col-xs-12 text-center index-guide">
+                 <a href="/Temperature/showTemperature/"> <img style="width: 33%" src="/Images/article.png"></a>
+                  <div>温度查看</div>
+              </div>
+              <div class="animated swing row-content col-lg-4 col-sm-6 col-xs-12 text-center index-guide" >
+                <a href="/Home/DormInfo" > <img style="width: 33%" src="/Images/browser-window.png"></a>
+                  <div>宿舍信息</div>
+              </div>
+               <div class="animated swing row-content col-lg-4 col-sm-6 col-xs-12 text-center index-guide">
+                 <a href="/Home/Author/"><img style="width: 33%" src="/Images/panda.png"></a>
+                  <div>作者</div>
+              </div>
+               <div class="animated swing row-content col-lg-4 col-sm-6 col-xs-12 text-center index-guide" style="">
+                 <a href="/TalkMessage/"><img style="width: 33%" src="/Images/chain-link.png"></a>
+                  <div>评论管理</div>
+              </div>
+               <div class="animated swing row-content col-lg-4 col-sm-6 col-xs-12 text-center index-guide" style="">
+                <a href="/TalkMessage/ShowTalkMessages/" class="/TalkMessage/ShowTalkMessages/" ><img style="width: 33%" src="/Images/rank-up.png"></a>
+                 <div>室友交流</div>
+              </div>
+               <div class="animated swing row-content col-lg-4 col-sm-6 col-xs-12 text-center index-guide" style="">
+                <a href="/Home/About/"><img style="width: 33%" src="/Images/penguin.png"></a>
+                 <div>其他</div>
+              </div>
+           </div><br />
+}
