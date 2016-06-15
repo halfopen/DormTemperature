@@ -70,9 +70,6 @@
             return temp_c
 
 
-这样就可以获取到温度
-
-宿舍
 ![pi](https://raw.githubusercontent.com/halfopen/DormTemperature/master/DormTemperature/Images/d1.JPG)
 
 树莓派控制台
